@@ -1,10 +1,11 @@
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+const isProd = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
-  base: '/gerenciador-de-marmitas-react/',
+  base: isProd ? '/gerenciador-de-marmitas-react/' : '/',
   plugins: [
     react(),
     tailwindcss()
