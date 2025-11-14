@@ -19,7 +19,11 @@ const router = createBrowserRouter([
     path: "/relatorio-marmitas",
     element: <RelatorioMarmita />
   }
-])
+],
+  {
+    basename: "/gerenciador-de-marmitas-react",
+  }
+)
 
 
 createRoot(document.getElementById('root')).render(
